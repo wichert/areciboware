@@ -1,10 +1,14 @@
 Changelog
 =========
 
-1.0 - Unreleased
+1.0b1 - Unreleased
 ----------------
 
+- Add request data with all  CGI and WSGI variables.
+  [wichert]
+
 - Include username in report if REMOTE_USER is set in the environ.
+  [wichert]
 
 
 1.0a1 - July 14, 2010
