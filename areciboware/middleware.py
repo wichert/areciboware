@@ -50,6 +50,8 @@ class AreciboMiddleware(ErrorMiddleware):
         report.set("user_agent", environ.get("HTTP_USER_AGENT"))
         report.set("ip", remote_address(environ))
         report.set("type", exc_info[0].__name__)
+        if "REMOTE_USER" in environ:
+            report.set("username", environ["REMOTE_USER"])
         report.set("traceback", traceback.format_exc(exc_info[2]))
         report.send()
 
